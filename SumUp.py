@@ -10,7 +10,6 @@ import numpy as np
 import datetime
 from datetime import timedelta
 import plotly.express as px
-import cv2
 #sys.path.append('C:\\ProgramData\\Anaconda3\\lib\\site-packages')
 from PIconnect import PI
 with PI.PIServer() as server:
@@ -865,8 +864,6 @@ else:
 # filter2= datetime.datetime.combine(date1, time1)
 if dffi.shape[0]>0:
     fig1 = px.timeline(dffi, x_start="Start", x_end="Finish", y="Resource", color="Resource")
-    fig1.write_image(file='C:\\Cutter\\Gantt.png',format='png')
-    image=cv2.imread('C:\\Cutter\\Gantt.png')
     st.plotly_chart(fig1)
 
 
