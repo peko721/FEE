@@ -44,9 +44,9 @@ cycle1=("Cutter 105","Cutter 107","Cutter 108")
 chooseM=st.selectbox('Please Select the Cutter Number',cycle1)
 
 
-dfbase105=pd.read_excel(r'C:\\Users\\zhangw16\\OneDrive - Corning Incorporated\\database\\datebase105.xlsx')
-dfbase107=pd.read_excel(r'C:\\Users\\zhangw16\\OneDrive - Corning Incorporated\\database\\datebase107.xlsx')
-dfbase108=pd.read_excel(r'C:\\Users\\zhangw16\\OneDrive - Corning Incorporated\\database\\datebase108.xlsx')
+dfbase105=pd.read_excel(r'datebase105.xlsx')
+dfbase107=pd.read_excel(r'datebase107.xlsx')
+dfbase108=pd.read_excel(r'datebase108.xlsx')
 dfbase105['date'] = pd.to_datetime(dfbase105['date'])
 indexfirszero=(dfbase105.loc[dfbase105['Week1'] == 0].index.tolist())[0]
 
